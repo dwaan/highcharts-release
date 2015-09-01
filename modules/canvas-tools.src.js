@@ -2894,7 +2894,7 @@ if(!Array.prototype.indexOf){
 	}
 })();
 
-if (typeof(CanvasRenderingContext2D) != 'undefined')
+if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	CanvasRenderingContext2D.prototype.drawSvg = function(s, dx, dy, dw, dh) {
 		canvg(this.canvas, s, { 
 			ignoreMouse: true, 
