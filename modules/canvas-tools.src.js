@@ -2894,7 +2894,7 @@ if(!Array.prototype.indexOf){
 	}
 })();
 
-if (CanvasRenderingContext2D) {
+if (typeof(CanvasRenderingContext2D) != 'undefined')
 	CanvasRenderingContext2D.prototype.drawSvg = function(s, dx, dy, dw, dh) {
 		canvg(this.canvas, s, { 
 			ignoreMouse: true, 
@@ -2928,7 +2928,7 @@ if (CanvasRenderingContext2D) {
 		VISIBLE = 'visible',
 		PX = 'px',
 		css = Highcharts.css,
-		CanVGRenderer = Highcharts.CanVGRenderer,
+		CanVGRenderer = (typeof(Highcharts.CanVGRenderer) != "undefined") ? Highcharts.CanVGRenderer : {},
 		SVGRenderer = Highcharts.SVGRenderer,
 		extend = Highcharts.extend,
 		merge = Highcharts.merge,
